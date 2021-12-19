@@ -21,7 +21,7 @@ func (m *MockClient) Do(req *http.Request) (*http.Response, error) {
 }
 
 func TestSuccess(t *testing.T) {
-	var p Powerpal = Powerpal{"auth_key", "device_id"}
+	var p *Powerpal = New("auth_key", "device_id")
 
 	jsonResponse := `{
 		"total_cost": 123.45
@@ -48,7 +48,7 @@ func TestSuccess(t *testing.T) {
 }
 
 func TestAuthenticationError(t *testing.T) {
-	var p Powerpal = Powerpal{"auth_key", "device"}
+	var p *Powerpal = New("auth_key", "device_id")
 
 	r := io.NopCloser(bytes.NewReader([]byte("Authentication error")))
 
@@ -68,7 +68,7 @@ func TestAuthenticationError(t *testing.T) {
 }
 
 func TestAuthorizationError(t *testing.T) {
-	var p Powerpal = Powerpal{"auth_key", "device"}
+	var p *Powerpal = New("auth_key", "device_id")
 
 	r := io.NopCloser(bytes.NewReader([]byte("Authorization error")))
 
@@ -88,7 +88,7 @@ func TestAuthorizationError(t *testing.T) {
 }
 
 func TestInternalError(t *testing.T) {
-	var p Powerpal = Powerpal{"auth_key", "device"}
+	var p *Powerpal = New("auth_key", "device_id")
 
 	r := io.NopCloser(bytes.NewReader([]byte("Internal Server Error")))
 

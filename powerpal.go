@@ -27,6 +27,13 @@ type Powerpal struct {
 	authKey, deviceId string
 }
 
+func New(authKey string, deviceId string) *Powerpal {
+	return &Powerpal{
+		authKey,
+		deviceId,
+	}
+}
+
 func (p Powerpal) getData() (*PowerpalDevice, error) {
 	url := BaseUrl + "/api/v1/device/" + p.deviceId
 
