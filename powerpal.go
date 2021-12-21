@@ -1,4 +1,4 @@
-package powerpal_go
+package powerpalgo
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/mindmelting/powerpal_go/internal/clientutils"
+	"github.com/mindmelting/powerpalgo/internal/clientutils"
 )
 
 const BaseUrl string = "https://readings.powerpal.net"

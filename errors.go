@@ -1,4 +1,4 @@
-package powerpal_go
+package powerpalgo
 
 import "fmt"
 

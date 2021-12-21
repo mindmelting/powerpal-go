@@ -5,7 +5,7 @@
 ```go
 import (
     "fmt"
-    pp "github.com/mindmelting/powerpal_go"
+    pp "github.com/mindmelting/powerpalgo"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 
     data, err := p.getData()
     
-    fmt.print(data.TotalWattHours)
+    fmt.println(data.TotalWattHours)
 }
 
 ```

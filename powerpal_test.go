@@ -1,4 +1,4 @@
-package powerpal_go
+package powerpalgo
 
 import (
 	"bytes"
@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/mindmelting/powerpal_go/internal/clientutils"
+	"github.com/mindmelting/powerpalgo/internal/clientutils"
 	"github.com/stretchr/testify/assert"
 )
 
