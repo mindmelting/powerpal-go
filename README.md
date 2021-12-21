@@ -11,7 +11,7 @@ import (
 func main() {
     var powerpal = pp.New("auth_key", "device_id")
 
-    data, err := p.getData()
+    data, err := powerpal.getData()
     
     fmt.println(data.TotalWattHours)
 }
